@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<title>LOJINHA DO MACEDÃO </title>
+  <style>
+body { background-color: #000000; font-family: sans-serif; color: #DCDCDC; }
+       img { border-radius: 10px; width: 400px; height: auto; margin: 5px; }
+       
+        .btn-compra {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .btn-compra:hover {
+            background-color: #218838;
+            box-shadow: 0px 0px 15px #28a745;
+        }
+    </style>
+<center>
+    <font color="#DCDCDC">
+ <h2>Essa é a Camisa Oficial 1 do Athletico Paranaense para a temporada 26/27, desenvolvida pela<br>
+Umbro com participação inédita dos torcedores no design. O modelo resgata as listras diagonais<br>
+agressivas inspiradas no uniforme de 2017/18, homenageando o primeiro título da CONMEBOL Sudamericana conquistado pelo clube.<br>
+</h2></font>
+
+<table>
+    <tr>
+<td><img src="produtos/athletico_I.png" ></td>
+<td><img src="produtos/athletico_I_costas.png"></td>
+</tr>
+</table>
+
+  <h1><font color="#FF0000">R$319,99</font></h1>
+
+ <button onclick="adicionarAoCarrinho('CAMISA ATHLETICO PARANAENSE', 319.99, 'produtos/athletico_I.png')" class="btn-compra">
+        🛒 ADICIONAR AO CARRINHO
+    </button>
+</center>
+
+<script>
+    function adicionarAoCarrinho(nome, preco, imagem) {
+        // 1. Busca a lista de produtos já salvos ou cria uma lista vazia se for o primeiro
+        let carrinho = JSON.parse(localStorage.getItem('meuCarrinho')) || [];
+     
+        // 2. Adiciona as informações do tênis atual na lista
+        carrinho.push({
+            nome: nome,
+            preco: preco,
+            imagem: imagem
+        });
+       
+        // 3. Salva a lista atualizada no "cérebro" do navegador (localStorage)
+        localStorage.setItem('meuCarrinho', JSON.stringify(carrinho));
+       
+        // 4. Redireciona o usuário para a página do carrinho
+        window.location.href = 'carrinho.html';
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+</body>
+</html>
